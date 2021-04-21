@@ -8,4 +8,4 @@ const ListarProductos = () => {
     );
 };
 
-export default ListarProductos;<h1>Pagina lista de productos</h1>
+export default ListarProductos;
