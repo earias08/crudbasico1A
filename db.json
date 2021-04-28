@@ -23,6 +23,24 @@
       "precioProducto": 120,
       "categoria": "bebidaFria",
       "id": 4
+    },
+    {
+      "nombreProducto": "brownie",
+      "precioProducto": 100,
+      "categoria": "dulce",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Jugo de naranja",
+      "precioProducto": 120,
+      "categoria": "bebidaFria",
+      "id": 6
+    },
+    {
+      "nombreProducto": "hjskdhf",
+      "precioProducto": 344,
+      "categoria": "salado",
+      "id": 7
     }
   ]
 }
