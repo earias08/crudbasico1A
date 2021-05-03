@@ -7,6 +7,7 @@ import Navegacion from "./components/common/Navegacion";
 import Footer from "./components/common/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from 'react';
+import EditarProducto from "./components/productos/EditarProducto";
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route exact path="/productos/nuevo">
           <AgregarProducto consultarAPI={consultarAPI}></AgregarProducto>
+        </Route>
+        <Route exact path="/productos/editar/:id">
+          <EditarProducto></EditarProducto>
         </Route>
       </Switch>
       <Footer></Footer>
