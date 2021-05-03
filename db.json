@@ -19,12 +19,6 @@
       "id": 3
     },
     {
-      "nombreProducto": "licuado",
-      "precioProducto": 120,
-      "categoria": "bebidaFria",
-      "id": 4
-    },
-    {
       "nombreProducto": "brownie",
       "precioProducto": 100,
       "categoria": "dulce",
@@ -35,12 +29,6 @@
       "precioProducto": 120,
       "categoria": "bebidaFria",
       "id": 6
-    },
-    {
-      "nombreProducto": "hjskdhf",
-      "precioProducto": 344,
-      "categoria": "salado",
-      "id": 7
     }
   ]
 }
