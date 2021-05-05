@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { useParams } from "react-router-dom";
+import { useParams, withRouter } from "react-router-dom";
 import { campoRequerido, rangoPrecio } from "../common/helpers";
 
-const EditarProducto = () => {
+const EditarProducto = (props) => {
   // obtener el parametro
   const codProducto = useParams().id;
   // const {id} = useParams();
@@ -34,7 +34,7 @@ const EditarProducto = () => {
     setCategoria(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     let categoriaModificada = categoria === "" ? producto.categoria : categoria;
@@ -47,6 +47,38 @@ const EditarProducto = () => {
     ) {
       // si son correctos hago el request
       setError(false);
+
+      try{
+        const productoModificado = {
+          nombreProducto: nombreProductoRef.current.value,
+          precioProducto: precioProductoRef.current.value,
+          categoria: categoriaModificada
+        }
+        
+        const respuesta = await fetch(URL,{
+          method:'PUT',
+          headers: {"Content-Type":"application/json"},
+          body: JSON.stringify(productoModificado)
+        });
+      
+        if(respuesta.status === 200){
+          // se actualizaron los datos en la api
+          Swal.fire(
+            'Producto modificado',
+            'Se actualizaron los datos del producto',
+            'success'
+          )
+          // consultar la api
+            props.consultarAPI();
+          // redireccionar
+          props.history.push('/productos');
+        }
+
+      }catch(error){
+        console.log(error);
+        // mostrar un cartel al usuario
+      }
+
     } else {
       // si no muestro el cartel de error
       setError(true);
@@ -133,4 +165,4 @@ const EditarProducto = () => {
   );
 };
 
-export default EditarProducto;
+export default withRouter(EditarProducto);

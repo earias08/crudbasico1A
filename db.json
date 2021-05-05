@@ -8,25 +8,25 @@
     },
     {
       "nombreProducto": "Medialuna x unidad",
-      "precioProducto": 40,
+      "precioProducto": "40",
       "categoria": "dulce",
       "id": 2
     },
     {
       "nombreProducto": "Pan x kg",
-      "precioProducto": 120,
+      "precioProducto": "120",
       "categoria": "salado",
       "id": 3
     },
     {
       "nombreProducto": "brownie",
-      "precioProducto": 100,
+      "precioProducto": "150",
       "categoria": "dulce",
       "id": 5
     },
     {
       "nombreProducto": "Jugo de naranja",
-      "precioProducto": 120,
+      "precioProducto": "130",
       "categoria": "bebidaFria",
       "id": 6
     }
